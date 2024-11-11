@@ -15,9 +15,9 @@ int main(void) {
 }
 
 
-void
-__interrupt_vec(WDT_VECTOR) WDT()	/* 250 interrupts/sec */
+void __interrupt_vec(WDT_VECTOR) WDT()	/* 250 interrupts/sec */
 {
-  P1OUT |= LED_GREEN;
+  P1OUT |= LED_RED;
+  P1OUT &= ~LED_GREEN;
 } 
 
